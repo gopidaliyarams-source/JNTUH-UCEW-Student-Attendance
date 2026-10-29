@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JNTUH UCEW · Student Attendance</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">J</div><div><strong>JNTUH <span>UCEW</span></strong><small>Wanaparthy Campus</small></div></div>
+    <div class="nav-label">WORKSPACE</div>
+    <button class="nav-item active" data-view="dashboard"><span>▦</span> Dashboard</button>
+    <button class="nav-item faculty-only" data-view="attendance"><span>✓</span> Mark Attendance</button>
+    <button class="nav-item" data-view="records"><span>▤</span> Attendance Records</button>
+    <button class="nav-item admin-only" data-view="manage"><span>⚙</span> Manage College</button>
+    <div class="sidebar-bottom"><div class="secure-dot"></div><div><strong>Campus Portal</strong><small>Attendance workspace</small></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="menu-btn" id="menuBtn">☰</button><div class="crumb">Workspace <span>/</span> <b id="crumbName">Dashboard</b></div><div class="top-right"><span class="live-pill">● SYSTEM ONLINE</span><div class="avatar" id="avatar">U</div><div class="user-meta"><strong id="userName">Guest</strong><small id="userRole">Please sign in</small></div><button class="logout hidden" id="logoutBtn">Log out ↗</button></div></header>
+    <section id="loginView" class="login-layout">
+      <div class="login-intro"><div class="eyebrow">JNTUH · STUDENT SERVICES</div><h1>Attendance,<br><em>made simpler.</em></h1><p>A centralized workspace for faculty to record attendance, students to track progress, and administrators to manage academic records.</p><div class="login-points"><span>✓ Role-based workspace</span><span>✓ Subject-wise records</span><span>✓ Reports ready to export</span></div></div>
+      <form class="login-card" id="loginForm"><div class="card-icon">↗</div><h2>Welcome back</h2><p class="muted">Sign in to your campus workspace.</p><label>Username<input id="username" autocomplete="username" placeholder="Enter username" required></label><label>Password<div class="password-wrap"><input id="password" type="password" autocomplete="current-password" placeholder="Enter password" required><button type="button" id="showPassword">Show</button></div></label><button class="primary full" type="submit">Sign in <span>→</span></button><div id="loginError" class="error"></div><div class="demo-box"><strong>Demo accounts</strong><small>Admin: <code>admin</code> / <code>Admin@123</code></small><small>Faculty: <code>faculty1</code> / <code>Faculty@123</code></small><small>Student: <code>26xw5a0501</code> / <code>Student@123</code></small></div></form>
+    </section>
+    <section id="contentView" class="content hidden">
+      <div class="welcome-row"><div><div class="eyebrow" id="dateLabel">CAMPUS OVERVIEW</div><h1 id="pageTitle">Good day 👋</h1><p id="pageSubtitle">Here is your attendance workspace at a glance.</p></div><div class="campus-chip"><span>✦</span> JNTUH UCEW Wanaparthy</div></div>
+      <div id="dashboardView"></div>
+      <div id="attendanceView" class="hidden"></div>
+      <div id="recordsView" class="hidden"></div>
+      <div id="manageView" class="hidden"></div>
+      <footer>JNTUH UCEW Wanaparthy · Student Attendance Management <span>Prototype workspace</span></footer>
+    </section>
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="/static/app.js"></script>
+</body></html>
